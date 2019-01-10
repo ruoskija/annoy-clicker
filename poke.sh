@@ -7,6 +7,7 @@ if [ $# -eq 0 ]
         clicks=100
 fi
 
+echo "Starting, you have 10s to place the cursor on the button"
 sleep 10s
 
 for ((i=1; i<=$clicks; i++))
