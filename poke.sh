@@ -1,8 +1,17 @@
 # Annoy my friend by clicking on a button on his website
+
+clicks=$1
+if [ $# -eq 0 ]
+    then
+        echo "Argument for amount of clicks missing. Using the default 100"
+        clicks=100
+fi
+
 sleep 10s
-for i in {1..500}
+
+for ((i=1; i<=$clicks; i++))
 do
-    echo "Annoyance number $i"
-    xdotool click 1
-    sleep 185s
+    echo "Annoying click number $i"
+    xdotool click 15
+    sleep 1s
 done
